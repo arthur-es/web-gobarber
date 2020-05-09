@@ -1,56 +1,82 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
+import backgroundImg from '../../assets/sign-in-background.png';
+
 export const Container = styled.div`
   width: 100%;
-  max-width: 736px;
-  margin: 0 auto;
-  padding: 40px 20px;
-`;
+  height: 100vh;
 
-export const Title = styled.h1`
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 54px;
-  color: #363f5f;
-  text-align: center;
-`;
-
-export const ImportFileContainer = styled.section`
-  background: #fff;
-  margin-top: 40px;
-  border-radius: 5px;
-  padding: 64px;
-`;
-
-export const Footer = styled.section`
-  margin-top: 36px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
+`;
 
-  p {
+export const Content = styled.div`
+  width: 100%;
+  max-width: 700px;
+
+  display: flex;
+
+  flex-direction: column;
+  place-content: center;
+
+  padding: 40px 0px;
+
+  form {
+    width: 340px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+
+    h1 {
+      margin-top: 24px;
+      font-size: 20px;
+      margin-bottom: 24px;
+      color: #f4ede8;
+    }
+
+    a {
+      text-decoration: none;
+      color: #f4ede8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 24px;
+      transition: color 0.2s;
+
+      &:hover {
+        color: ${shade(0.2, '#f4ede8')};
+      }
+
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  > a {
+    text-decoration: none;
+    color: #ff9000;
     display: flex;
     align-items: center;
-    font-size: 12px;
-    line-height: 18px;
-    color: #969cb3;
-
-    img {
-      margin-right: 5px;
-    }
-  }
-
-  button {
-    background: #ff872c;
-    color: #fff;
-    border-radius: 5px;
-    padding: 15px 80px;
-    border: 0;
-    transition: background-color 0.2s;
+    justify-content: center;
+    margin-top: 24px;
+    transition: color 0.2s;
 
     &:hover {
-      background: ${shade(0.2, '#ff872c')};
+      color: ${shade(0.2, '#ff9000')};
+    }
+
+    svg {
+      margin-right: 16px;
     }
   }
+`;
+
+export const Background = styled.div`
+  flex: 1;
+  background: url(${backgroundImg}) no-repeat center;
 `;
