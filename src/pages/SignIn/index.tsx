@@ -5,7 +5,7 @@ import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
 
 import { FiMail, FiLock, FiLogIn } from 'react-icons/fi';
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from '../../hooks/AuthContext';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';

@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import Routes from './routes';
 
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider } from './hooks/AuthContext';
 
 import GlobalStyle from './styles/global';
 
