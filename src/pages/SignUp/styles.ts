@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
 
 import backgroundImg from '../../assets/sign-up-background.png';
@@ -22,6 +22,24 @@ export const Content = styled.div`
   place-content: center;
 
   padding: 40px 0px;
+`;
+
+const appearFromRight = keyframes`
+  from {
+    opacity: 0;
+  }
+   to {
+    opacity: 1;
+   }
+`;
+
+export const AnimationContainer = styled.div`
+  display: flex;
+
+  flex-direction: column;
+  place-content: center;
+
+  animation: ${appearFromRight} 1s;
 
   form {
     width: 340px;
@@ -59,7 +77,7 @@ export const Content = styled.div`
 
   > a {
     text-decoration: none;
-    color: #f4ede8;
+    color: #ff9000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +85,7 @@ export const Content = styled.div`
     transition: color 0.2s;
 
     &:hover {
-      color: ${shade(0.2, '#f4ede8')};
+      color: ${shade(0.2, '#ff9000')};
     }
 
     svg {
